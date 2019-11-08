@@ -41,6 +41,9 @@ namespace NetSparkle.UI.NetFramework.WinForms
             this.panel1 = new System.Windows.Forms.Panel();
             this.ReleaseNotesBrowser = new System.Windows.Forms.WebBrowser();
             this.imgAppIcon = new System.Windows.Forms.PictureBox();
+            this.lblInstall = new System.Windows.Forms.Label();
+            this.lblDownload = new System.Windows.Forms.Label();
+            this.lblUnknownVersion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgAppIcon)).BeginInit();
             this.SuspendLayout();
@@ -96,15 +99,30 @@ namespace NetSparkle.UI.NetFramework.WinForms
             // 
             // imgAppIcon
             // 
-            this.imgAppIcon.Image = global::NetSparkle.Properties.Resources.software_update_available1;
             resources.ApplyResources(this.imgAppIcon, "imgAppIcon");
             this.imgAppIcon.Name = "imgAppIcon";
             this.imgAppIcon.TabStop = false;
+            // 
+            // lblInstall
+            // 
+            resources.ApplyResources(this.lblInstall, "lblInstall");
+            this.lblInstall.Name = "lblInstall";
+            // 
+            // lblDownload
+            // 
+            resources.ApplyResources(this.lblDownload, "lblDownload");
+            this.lblDownload.Name = "lblDownload";
+            // 
+            // lblUnknownVersion
+            // 
+            resources.ApplyResources(this.lblUnknownVersion, "lblUnknownVersion");
+            this.lblUnknownVersion.Name = "lblUnknownVersion";
             // 
             // UpdateAvailableWindow
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblUnknownVersion);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.updateButton);
@@ -113,6 +131,8 @@ namespace NetSparkle.UI.NetFramework.WinForms
             this.Controls.Add(this.lblInfoText);
             this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.imgAppIcon);
+            this.Controls.Add(this.lblDownload);
+            this.Controls.Add(this.lblInstall);
             this.MaximizeBox = false;
             this.Name = "UpdateAvailableWindow";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
@@ -134,5 +154,8 @@ namespace NetSparkle.UI.NetFramework.WinForms
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.WebBrowser ReleaseNotesBrowser;
+        private System.Windows.Forms.Label lblInstall;
+        private System.Windows.Forms.Label lblDownload;
+        private System.Windows.Forms.Label lblUnknownVersion;
     }
 }

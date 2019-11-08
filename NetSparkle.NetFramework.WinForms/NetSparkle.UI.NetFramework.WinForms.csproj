@@ -71,6 +71,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CheckingForUpdatesWindow.ja-JP.resx">
+      <DependentUpon>CheckingForUpdatesWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CheckingForUpdatesWindow.resx">
       <DependentUpon>CheckingForUpdatesWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +90,9 @@
       <DependentUpon>DownloadProgressWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadProgressWindow.it.resx">
+      <DependentUpon>DownloadProgressWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadProgressWindow.ja-JP.resx">
       <DependentUpon>DownloadProgressWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadProgressWindow.lt.resx">
@@ -110,6 +116,9 @@
     <EmbeddedResource Include="DownloadProgressWindow.zh-TW.resx">
       <DependentUpon>DownloadProgressWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MessageNotificationWindow.ja-JP.resx">
+      <DependentUpon>MessageNotificationWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MessageNotificationWindow.resx">
       <DependentUpon>MessageNotificationWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +135,9 @@
       <DependentUpon>UpdateAvailableWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateAvailableWindow.it.resx">
+      <DependentUpon>UpdateAvailableWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateAvailableWindow.ja-JP.resx">
       <DependentUpon>UpdateAvailableWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateAvailableWindow.lt.resx">

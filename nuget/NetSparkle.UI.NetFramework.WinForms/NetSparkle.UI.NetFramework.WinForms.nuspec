@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
  <metadata>
-   <id>HiraokaHyperTools.NetSparkle.N</id>
-   <title>HiraokaHyperTools.NetSparkle.N</title>
+   <id>HiraokaHyperTools.NetSparkle.N.UI.NetFramework.WinForms</id>
+   <title>HiraokaHyperTools.NetSparkle.N.UI.NetFramework.WinForms</title>
    <version>$version$</version>
    <authors>kenjiuno, Deadpikle, Dirk Eisenberg</authors>
    <owners>kenjiuno</owners>
@@ -14,5 +14,8 @@
    <copyright>Copyright 2010 - 2019</copyright>
    <tags>Update Sparkle Autoupdate .NET Update</tags>    
    <releaseNotes>See https://github.com/HiraokaHyperTools/NetSparkle/releases for all release information and to file issues/pull requests for this project</releaseNotes>
+   <dependencies>
+    <dependency id="HiraokaHyperTools.NetSparkle.N" version="$version$" />
+   </dependencies>
  </metadata>
 </package>

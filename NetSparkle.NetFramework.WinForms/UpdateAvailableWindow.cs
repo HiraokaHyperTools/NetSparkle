@@ -62,7 +62,7 @@ namespace NetSparkle.UI.NetFramework.WinForms
 
             AppCastItem item = items.FirstOrDefault();
 
-            var downloadInstallText = isUpdateAlreadyDownloaded ? "install" : "download";
+            var downloadInstallText = isUpdateAlreadyDownloaded ? lblInstall.Text : lblDownload.Text;
             lblHeader.Text = lblHeader.Text.Replace("APP", item != null ? item.AppName : "the application");
             if (item != null)
             {
@@ -78,12 +78,16 @@ namespace NetSparkle.UI.NetFramework.WinForms
                 {
                     versionString = "?";
                 }
-                lblInfoText.Text = string.Format("{0} is now available (you have {1}). Would you like to {2} it now?", item.AppName, versionString, downloadInstallText);
+                lblInfoText.Text = lblInfoText.Text
+                    .Replace("APP", item.AppName)
+                    .Replace("OLDVERSION", versionString)
+                    .Replace("DOWNLOAD", downloadInstallText);
             }
             else
             {
                 // TODO: string translations (even though I guess this window should never be called with 0 app cast items...)
-                lblInfoText.Text = string.Format("Would you like to {0} it now?", downloadInstallText);
+                lblInfoText.Text = lblUnknownVersion.Text
+                    .Replace("DOWNLOAD", downloadInstallText);
             }
 
             bool isUserMissingCriticalUpdate = items.Any(x => x.IsCriticalUpdate);

@@ -11,6 +11,9 @@ using System.Net;
 
 namespace NetSparkle
 {
+    /// <summary>
+    /// TBD
+    /// </summary>
     public class ReleaseNotesGrabber
     {
         private string _separatorTemplate;
@@ -18,8 +21,14 @@ namespace NetSparkle
 
         private Sparkle _sparkle;
 
+        /// <summary>
+        /// TBD
+        /// </summary>
         public static readonly List<string> MarkDownExtensions = new List<string> { ".md", ".mkdn", ".mkd", ".markdown" };
 
+        /// <summary>
+        /// TBD
+        /// </summary>
         public ReleaseNotesGrabber(string separatorTemplate, string htmlHeadAddition, Sparkle sparkle)
         {
             _separatorTemplate =
@@ -31,11 +40,22 @@ namespace NetSparkle
             _sparkle = sparkle;
         }
 
+        /// <summary>
+        /// TBD
+        /// </summary>
+        /// <returns></returns>
         public string GetLoadingText()
         {
             return _initialHTML + "<p><em>Loading release notes...</em></p></body></html>"; ;
         }
 
+        /// <summary>
+        /// TBD
+        /// </summary>
+        /// <param name="items"></param>
+        /// <param name="latestVersion"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         public async Task<string> DownloadAllReleaseNotesAsHTML(AppCastItem[] items, AppCastItem latestVersion, CancellationToken cancellationToken)
         {
             _sparkle.LogWriter.PrintMessage("Preparing to initialize release notes...");

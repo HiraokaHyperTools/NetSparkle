@@ -119,7 +119,7 @@ namespace NetSparkle
         {
             get
             {
-                return _assembly.GetName().Version.ToString();
+                return System.Diagnostics.FileVersionInfo.GetVersionInfo(_assembly.Location).FileVersion;
             }
         }        
 
