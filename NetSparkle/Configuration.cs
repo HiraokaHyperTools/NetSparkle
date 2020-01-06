@@ -142,5 +142,16 @@ namespace NetSparkle
             DidRunOnce = false;
             UseReflectionBasedAssemblyAccessor = true;
         }
+
+        /// <summary>
+        /// Disable SkipThisVersion feature
+        /// </summary>
+        /// <remarks>
+        /// - User should be able to retrieve already skipped version as a latest version.
+        /// </remarks>
+        public void DisableSkipThisVersion()
+        {
+            SkipThisVersion = String.Empty;
+        }
     }
 }
