@@ -684,7 +684,7 @@ namespace NetSparkle
         }
 
         /// <summary>
-        /// Stops the Sparkle background loop. Called automatically by <see cref="Dispose"/>.
+        /// Stops the Sparkle background loop. Called automatically by <see cref="Dispose()"/>.
         /// </summary>
         public void StopLoop()
         {
@@ -697,8 +697,19 @@ namespace NetSparkle
         /// </summary>
         public void Dispose()
         {
-            StopLoop();
-            UnregisterEvents();
+            Dispose(true);
+        }
+
+        /// <summary>
+        /// Stops all background activities.
+        /// </summary>
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                StopLoop();
+                UnregisterEvents();
+            }
         }
 
         /// <summary>
@@ -1501,6 +1512,10 @@ namespace NetSparkle
             }
             UpdateCheckStarted?.Invoke(this);
             Configuration config = GetApplicationConfig();
+            if (!useNotificationToast)
+            {
+                config.DisableSkipThisVersion();
+            }
             // update profile information as needed
             UpdateSystemProfileInformation(config);
 
