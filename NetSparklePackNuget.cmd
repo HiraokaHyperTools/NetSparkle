@@ -86,3 +86,5 @@ rem nuget Push tools\NetSparkle.New.Tools.%1.nupkg -Source https://www.nuget.org
 
 echo Leaving directories
 cd ..
+
+dir *.nupkg /b/s
