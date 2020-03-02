@@ -1628,6 +1628,8 @@ namespace NetSparkle
             UserWindow = null; // done using the window so don't hold onto reference
             CheckingForUpdatesWindow?.Close();
             CheckingForUpdatesWindow = null;
+
+            System.Windows.Threading.Dispatcher.CurrentDispatcher.InvokeShutdown();
         }
 
         /// <summary>
